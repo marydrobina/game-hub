@@ -8,7 +8,7 @@ interface PropsPlatformsIconsList {
 const PlatformsIconsList = ({ game }: PropsPlatformsIconsList) => {
   return (
     <>
-      <HStack marginTop={"10px"}>
+      <HStack>
         {game.parent_platforms.map((pl) => (
           <PlatformsIcons key={pl.platform.id} platform={pl.platform} />
         ))}
