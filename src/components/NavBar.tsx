@@ -3,7 +3,7 @@ import logo from "../assets/logo.svg";
 import ColorThemeSwitch from "./ColorThemeSwitch";
 const NavBar = () => {
   return (
-    <HStack justifyContent={"space-between"} padding={"10px 10px"}>
+    <HStack justifyContent={"space-between"} marginBottom={"1rem"}>
       <Image
         src={logo}
         width={"100%"}
