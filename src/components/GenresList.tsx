@@ -5,9 +5,10 @@ import GenresListSkeleton from "./GenresListSkeleton";
 
 interface PropsGenreList {
   onSelectedGenre: (selectedGenre: Genre) => void;
+  selectedGenre: Genre | null;
 }
 
-const GenresList = ({ onSelectedGenre }: PropsGenreList) => {
+const GenresList = ({ onSelectedGenre, selectedGenre }: PropsGenreList) => {
   const { data, error, isLoading } = useGenres();
 
   if (error) return null;
@@ -25,6 +26,7 @@ const GenresList = ({ onSelectedGenre }: PropsGenreList) => {
               src={getCroppedImage(genre.image_background)}
             />
             <Button
+              fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
               onClick={() => onSelectedGenre(genre)}
               variant={"link"}
               fontSize={"lg"}
