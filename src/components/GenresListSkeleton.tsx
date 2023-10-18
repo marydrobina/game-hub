@@ -1,12 +1,9 @@
 import {
-  Box,
   HStack,
-  Image,
   List,
   ListItem,
   Skeleton,
   SkeletonText,
-  Stack,
 } from "@chakra-ui/react";
 
 const GenresListSkeleton = () => {
