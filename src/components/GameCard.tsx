@@ -10,14 +10,14 @@ interface GameCardProps {
 
 const GameCard = ({ game }: GameCardProps) => {
   return (
-    <Card>
+    <Card height={335}>
       <Image src={getCroppedImage(game.background_image)} />
       <CardBody>
-        <Heading fontSize="2xl">{game.name}</Heading>
-        <HStack marginTop={"10px"} justifyContent={"space-between"}>
+        <HStack marginBottom={3} justifyContent={"space-between"}>
           <PlatformsIconsList game={game} />
           <CriticScore score={game.metacritic} />
         </HStack>
+        <Heading fontSize="2xl">{game.name}</Heading>
       </CardBody>
     </Card>
   );
