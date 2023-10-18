@@ -20,6 +20,7 @@ const theme = extendTheme({
       800: "#121212",
       900: "#111",
     },
+    white: "#f9f9f9",
   },
 });
 
